@@ -1,0 +1,22 @@
+<nb-layout withScroll>
+
+  <nb-layout-header *ngIf="(layout$ | async)?.header" class="slot" >
+    <div class="space space-component background-transparent">
+      <button nbButton size="medium" appearance="ghost" status="primary" (click)="toggleSidebar()">
+          <nb-icon icon="menu"></nb-icon>
+      </button>
+      <h1 class="text-basic">Intelligent Classroom System</h1>
+    </div>
+  </nb-layout-header>
+
+  <nb-sidebar *ngIf="(layout$ | async)?.sidebar" class="slot" >
+    <div class="space space-component1 background-transparent">
+      <nb-menu class="menu" [items]="items"></nb-menu>
+    </div>
+  </nb-sidebar>
+
+  <nb-layout-column [style.padding]="padding$ | async">
+    <router-outlet></router-outlet>
+  </nb-layout-column>
+
+</nb-layout>

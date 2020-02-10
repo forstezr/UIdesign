@@ -1,0 +1,19 @@
+:host {
+  display: block;
+  width: 100%;
+}
+
+.space-component {
+  height: auto;
+  min-height: 2rem;
+  flex-grow: 1;
+  flex-basis: 0;
+  align-items: center;
+  align-content: center;
+  justify-content: left;
+  overflow: visible;
+}
+
+.card {
+  width: 100%;
+}

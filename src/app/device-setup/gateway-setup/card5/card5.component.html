@@ -1,0 +1,33 @@
+<nb-card class="smart-table" >
+  <nb-card-header class="slot">
+    <div class="space space-component background-transparent">
+      <input nbInput class="input" placeholder="Enter a name for your new Gateway" fieldSize="medium" type="text" shape="rectangle" status="basic">
+      <button nbButton class="right" size="medium" appearance="filled" status="primary">
+          Generate Hex File
+          <nb-icon icon="download"></nb-icon>
+      </button>
+    </div>
+  </nb-card-header>
+
+  <nb-card-body class="slot">
+    <div class="space space-component2 background-transparent">
+      <div class="space space-component1 col-md-12 background-transparent">
+        <input nbInput placeholder="Enter Gateway MAC Address Here" fieldSize="medium" type="text" shape="rectangle" status="basic" fullWidth>
+      </div>
+      <div class="space space-component1 col-md-12 background-transparent">
+        <p class="text text-basic paragraph">The MAC address is found on the ethernet module of the Gateway device. For example the MAC address should look like something this:      00:1B:44:11:3A:B7</p>
+      </div>
+    </div>
+  </nb-card-body>
+
+  <nb-card-footer class="slot">
+    <div class="space space-component2 background-transparent">
+      <div class="space space-component1 col-md-12 background-transparent">
+        <app-smart-table class="smart-table" [settings]="settings" [source]="source"></app-smart-table>
+      </div>
+      <div class="space space-component1 col-md-12 background-transparent">
+        <p class="text text-basic paragraph">Sensor type must be TL - temperature & light, W - temperature, humidity, pressure, or N - noise. In addition, the sensor ID must match the sensors that have already been added to the Gateway.</p>
+      </div>
+    </div>
+  </nb-card-footer>
+</nb-card>

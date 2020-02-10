@@ -1,0 +1,29 @@
+app-header {
+  flex: 1;
+  overflow: hidden;
+}
+
+.space-component {
+  height: auto;
+  min-height: 2rem;
+  flex-grow: 1;
+  flex-basis: 0;
+  align-items: stretch;
+  align-content: stretch;
+  justify-content: flex-start;
+  overflow: visible;
+}
+
+.menu {
+  width: 100%;
+}
+
+.space-component1 {
+  height: 100%;
+  width: 100%;
+  align-items: flex-start;
+  align-content: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  overflow: auto;
+}
